@@ -63,10 +63,6 @@ Telegram SOCKS5 Proxy
     │
     ▼
 Internet
-
-<img width="1280" height="720" alt="ScreenRecording2026-10-08175048-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/9d69b00a-6fc5-4e72-b351-17b7ab13aea3" />
-
-
 ```
 
 The local bridge listens on `127.0.0.1` using a randomly selected port and does not require local authentication.
