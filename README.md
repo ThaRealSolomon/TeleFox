@@ -1,3 +1,4 @@
+<img width="1254" height="1254" alt="Pixel Fox Embracing Telegram Orb" src="https://github.com/user-attachments/assets/b2406c96-87a7-40e8-87c6-89641b3fd72c" />
 # TeleFox
 Electron/Chromium browser that imports and uses Telegram `tg://socks` proxies.
 
