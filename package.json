@@ -1,0 +1,22 @@
+{
+  "name": "telefox", "version": "0.1.0", "description": "Chromium browser with built-in Telegram SOCKS5 proxy management",
+  "main": "dist/main/main/main.js", "author": "TeleFox", "license": "MIT",
+  "scripts": {
+    "dev": "tsc -p tsconfig.node.json && concurrently -k \"vite\" \"wait-on tcp:5173 && electron . --dev\"",
+    "build": "vite build && tsc -p tsconfig.node.json",
+    "package": "npm run build && electron-builder --win nsis portable",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0", "@types/react": "^18.3.12", "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3", "concurrently": "^9.1.0", "electron": "^33.2.0",
+    "electron-builder": "^25.1.8", "react": "^18.3.1", "react-dom": "^18.3.1",
+    "typescript": "^5.6.3", "vite": "^5.4.11", "vitest": "^2.1.5", "wait-on": "^8.0.1"
+  },
+  "build": {
+    "appId": "app.telefox.browser", "productName": "TeleFox", "files": ["dist/**", "package.json"],
+    "directories": { "output": "release" },
+    "win": { "target": ["nsis", "portable"] },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true }
+  }
+}
